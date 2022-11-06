@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  position: relative;
+}
+.container{
+  max-width: 1440px;
+  min-height: 1024px;
+  padding: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 45px;
+}
+.wrapper__elements{
+  width: 261px;
+  min-height: 600px;
+  padding: 18px;
+  background-color: #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.img{
+  width: 233px;
+  height: 123px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.span, .p-text, .h2-text, .h3-text{
+  font-size: 12px;
+  font-weight: 400;
+}
+.p-text{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.h3-text{
+  width: 176px;
+}
+.wrapper__elements > button{
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#D9D9D9 ;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 360px;
+  height: 150px;
+  position: relative;
+  display: none;
+}
+.balls{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.ball{
+  position: absolute;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(203, 205, 63);
+  border-radius: 50%;
+  margin: 0 20px;
+  animation: ball 2s infinite;
+}
+.ball--1{
+  background-image: linear-gradient(to bottom, #fadd06, #ff952a);
+}
+.ball--2{
+  background-image: linear-gradient(to bottom, #ca4a4a, #ff312a);
+}
+.ball--3{
+  background-image: linear-gradient(to bottom, #8a8888, #080808);
+}
+.ball--4{
+  background-image: linear-gradient(to bottom, #3e51ff, #5600f5);
+}
+.balls-1 .ball--1{
+  left: 20px;
+  animation-delay: 0;
+
+}
+.balls-1 .ball--2{
+  left: 100px;
+  animation-delay: .1s;
+}
+.balls-1 .ball--3{
+  left: 180px;
+  animation-delay: .15s;
+
+}
+.balls-1 .ball--4{
+  left: 260px;
+  animation-delay: .2s;
+}
+.balls-2 .ball--1{
+  left: 20px;
+  animation-delay: 0;
+}
+.balls-2 .ball--2{
+  left: 100px;
+  animation-delay: .1s;
+}
+.balls-2 .ball--3{
+  left: 180px;
+  animation-delay: .15s;
+}
+.balls-2 .ball--4{
+  left: 260px;
+  animation-delay: .2s;
+}
+@keyframes ball {
+  0%, 25% {top: -50px;}
+  35% { top: calc(60% -50px);}
+  40% { top: calc(45% -50px);}
+  45% { top: calc(55% -50px);}
+  50%, 70% { top: calc(50% -25px);}
+  80%, 100% { top: calc(100%);}
+}
+.madal{
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  height: 1000%;
+  background-color: #D9D9D9;
+  background: #000000d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: none;
+}
+.sucsessfully_delete{
+  z-index: 999;
+  width: 500px;
+  height: 200px;
+  background-color: #D9D9D9;
+  background: #000000d0;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  position: absolute;
+ 
+}
+.sucsessfully_delete > h1{
+  position: relative;
+  color: #D9D9D9;
+}
+.sucsessfully_delete >button{
+  width: 80px;
+  height: 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #D9D9D9;
+  color: #000000d0;
+}
